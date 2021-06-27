@@ -98,32 +98,49 @@
                         <h4 class="text-center mt-4"></h4>
                         <v-form>
                           <v-text-field
-                            label="Name"
-                            name="Name"
+                            label="Nombre"
+                            name="Nombre"
                             prepend-icon="person"
                             type="text"
                             color="teal accent-3"
+                            :value="registerName"
+                            @input = "setRegisterName"
                           />
                           <v-text-field
-                            label="Email"
-                            name="Email"
+                            label="Correo"
+                            name="Correo"
                             prepend-icon="email"
                             type="text"
                             color="teal accent-3"
+                             :value="registerEmail"
+                             @input = "setRegisterEmail"
                           />
 
                           <v-text-field
-                            id="password"
-                            label="Password"
-                            name="password"
+                            id="contraseña"
+                            label="Contraseña"
+                            name="contraseña"
                             prepend-icon="lock"
                             type="password"
                             color="teal accent-3"
+                             :value="registerPassword"
+                             @input = "setRegisterPassword"
                           />
+
+                           <v-select
+                            prepend-icon="badge"
+                            type="select"
+                            :items= "items"
+                            :rules="[v => !!v || 'Item is required']"
+                            label="Departamento"
+                            required
+                            :value="registerDepartment"
+                            @input = "setRegisterDepartment"
+                          ></v-select>
                         </v-form>
                       </v-card-text>
                       <div class="text-center mt-n5">
-                        <v-btn rounded color="teal accent-3" dark>Registrarse</v-btn>
+                        <v-btn rounded color="teal accent-3" dark @click="register">Registrarse</v-btn>
                       </div>
                       <br>
                     </v-col>
@@ -139,12 +156,43 @@
 </template>
 
 <script>
+import { mapState, mapMutations, mapActions } from 'vuex';
+
 export default {
+  computed: {
+    ...mapState('authentication', [
+      'registerEmail',
+      'registerPassword',
+      'registerName',
+      'registerDepartment',
+    ]),
+  },
+  methods:{
+  ...mapMutations('authentication', [
+      'setRegisterEmail', 'setRegisterPassword',
+      'setRegisterName', 'setRegisterDepartment']),
+  ...mapActions('authentication', [
+      'register',
+  ])
+  },
   data: () => ({
-    step: 1
+    items: [
+        'Sistemas',
+        'Electronica',
+        'Industrial',
+        'Administración',
+        'Gestión',
+        'Química',
+        'Bioquímica',
+        'Mecanica',
+        'Mecatrónica',
+      ],
+    step: 1,
   }),
   props: {
     source: String
-  }
+  },
+  
+  
 };
 </script>
