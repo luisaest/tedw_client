@@ -13,6 +13,7 @@ export default {
         token: null,
         registerError: null,
         loginError: null,
+        loginUser: null,
     },
     actions: {
         register({ commit, state }) {
@@ -42,11 +43,47 @@ export default {
             })
             .then(({ data }) => {
                 commit('setToken', data.token);
-                router.go('');
+                HTTP().post('/user', {
+                    username: state.loginEmail,
+                })
+                .then(({ data }) => {
+                    switch(data.id_rol) {
+                        case 1:
+                            router.push('/student');
+                            break;
+                        case 2:
+                            router.push('/medic');
+                            break;
+                        case 3:
+                            router.push('/admin');
+                            break;
+                    }
+                })
+                
             })
             .catch(() =>{
                 commit('setLoginError', 'Ocurrió un error al iniciar sesión, intenta de nuevo.')
             });
+        },
+
+        search_user({ state }){
+            console.log('entre a buscar usuario');
+            HTTP().post('/user', {
+                username: state.loginEmail,
+            })
+            .then(({ data }) => {
+                switch(data.id_rol) {
+                    case 1:
+                        router.push('/student');
+                        break;
+                    case 2:
+                        router.push('/medic');
+                        break;
+                    case 3:
+                        router.push('/admin');
+                        break;
+                }
+            })
         },
     },
     mutations: {
@@ -77,5 +114,9 @@ export default {
         setLoginPassword(state, password){
             state.loginPassword = password;
         },
+        setLoginUser(state, user){
+            state.loginUser = user;
+        },
+
     },
 }
