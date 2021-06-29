@@ -34,6 +34,8 @@
                             prepend-icon="email"
                             type="text"
                             color="teal accent-3"
+                            :value="loginEmail"
+                            @input = "setLoginEmail"
                           />
 
                           <v-text-field
@@ -43,12 +45,18 @@
                             prepend-icon="lock"
                             type="password"
                             color="teal accent-3"
+                            :value="loginPassword"
+                            @input = "setLoginPassword"
                           />
                         </v-form>
+                        
                         <h3 class="text-center mt-4">¿Olvidaste tu contraseña?</h3>
+                        <v-alert type="error" :value="loginError">
+                          {{loginError}}
+                        </v-alert>
                       </v-card-text>
                       <div class="text-center mt-3">
-                        <v-btn rounded color="teal accent-3" dark>Iniciar sesión</v-btn>
+                        <v-btn rounded color="teal accent-3" dark @click="login">Iniciar sesión</v-btn>
                       </div>
                       <br>
                     </v-col>
@@ -138,6 +146,9 @@
                             @input = "setRegisterDepartment"
                           ></v-select>
                         </v-form>
+                        <v-alert type="error" :value="registerError">
+                          {{registerError}}
+                        </v-alert>
                       </v-card-text>
                       <div class="text-center mt-n5">
                         <v-btn rounded color="teal accent-3" dark @click="register">Registrarse</v-btn>
@@ -165,14 +176,20 @@ export default {
       'registerPassword',
       'registerName',
       'registerDepartment',
+      'registerError',
+      'loginEmail',
+      'loginPassword',
+      'loginError',
     ]),
   },
   methods:{
   ...mapMutations('authentication', [
       'setRegisterEmail', 'setRegisterPassword',
-      'setRegisterName', 'setRegisterDepartment']),
+      'setRegisterName', 'setRegisterDepartment',
+      'setLoginEmail', 'setLoginPassword']),
   ...mapActions('authentication', [
       'register',
+      'login',
   ])
   },
   data: () => ({
