@@ -66,7 +66,7 @@
                         <b-card-text>
                             Descripcion de los resultados
                         </b-card-text>
-                        <b-button :to="{name:'consulta-alumno'}" variant="info">Ver resultados</b-button>
+                        <b-button :to="{name:'resultados-alumno',params:{id:id}}" variant="info">Ver resultados</b-button>
                         </b-card-body>
                     </b-col>
                     </b-row>
@@ -81,7 +81,7 @@ export default {
     name:'TarjetasAlumno',
     data(){
         return{
-            
+            id:1,
         }
     }
 }

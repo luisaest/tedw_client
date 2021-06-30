@@ -49,7 +49,7 @@ const routes = [
     component:()=>import('../views/alumnos/alertas.vue')
   },
   {
-    path:'/alumno/resultados',
+    path:'/alumno/resultados/:id',
     name:'resultados-alumno',
     component:()=>import('../views/alumnos/resultados.vue')
   },
