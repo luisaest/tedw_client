@@ -19,7 +19,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-<<<<<<< HEAD
     path: '/medic',
     name: 'Medic',
     component: () => import(/* webpackChunkName: "about" */ '../views/Medico/index.vue')
@@ -28,8 +27,8 @@ const routes = [
     path: '/surveymedic',
     name: 'SurveyMedic',
     component: () => import(/* webpackChunkName: "about" */ '../views/Medico/encuesta.vue')
-  }
-=======
+  },
+  {
     path:'/alumno',
     name:'alumno',
     component:()=>import('../views/alumnos/index.vue')
@@ -54,7 +53,6 @@ const routes = [
     name:'resultados-alumno',
     component:()=>import('../views/alumnos/resultados.vue')
   },
->>>>>>> 623b2b1d7ad119d524c1760ddc71b7455ccb0f57
 ]
 
 const router = new VueRouter({
