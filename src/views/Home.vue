@@ -56,7 +56,7 @@
                         </v-alert>
                       </v-card-text>
                       <div class="text-center mt-3">
-                        <v-btn rounded color="teal accent-3" dark @click="login">Iniciar sesión</v-btn>
+                        <v-btn rounded color="teal accent-3" dark @click="login();">Iniciar sesión</v-btn>
                       </div>
                       <br>
                     </v-col>
@@ -190,6 +190,7 @@ export default {
   ...mapActions('authentication', [
       'register',
       'login',
+      'search_user',
   ])
   },
   data: () => ({
