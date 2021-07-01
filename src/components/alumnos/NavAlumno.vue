@@ -29,10 +29,8 @@ export default {
   name: 'NavAlumno',
    data(){
         return{
-            id:1,
             nombre:'Nombre Alumno'
         }
     },
-    props:['id_user'],
 }
 </script>

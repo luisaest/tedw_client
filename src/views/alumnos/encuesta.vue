@@ -1,6 +1,6 @@
 <template>
 <div id="encuesta">
-    <Nav></Nav>
+    <Nav ></Nav>
     <b-container fluid="md" class="p3">
         <h1 class="text-center">Encuestas</h1>
         <div class="center">

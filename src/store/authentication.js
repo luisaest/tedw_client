@@ -49,7 +49,7 @@ export default {
                 .then(({ data }) => {
                     switch(data.id_rol) {
                         case 1:
-                            router.push('/student');
+                            router.push('/alumno');
                             break;
                         case 2:
                             router.push('/medic');
