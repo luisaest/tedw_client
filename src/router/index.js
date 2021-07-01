@@ -98,6 +98,11 @@ const routes = [
     name:'crear-medicina',
     component:()=>import('@/views/Administrador/CrearMedicina.vue')
   },
+  {
+    path:'/admin/medicina/:id',
+    name:'edit-medicina',
+    component:()=>import('@/views/Administrador/EditMedicina.vue')
+  },
 ]
 
 const router = new VueRouter({
