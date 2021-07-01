@@ -17,7 +17,7 @@
            <b-navbar-nav class="ml-auto">
              <b-nav-item-dropdown text="Nombre del medico" right>
                <b-dropdown-item>Ajustes</b-dropdown-item>
-               <b-dropdown-item>Salir</b-dropdown-item>
+               <b-dropdown-item  @click="logout">Salir</b-dropdown-item>
              </b-nav-item-dropdown>
            </b-navbar-nav>
          </b-collapse>
@@ -26,7 +26,14 @@
     </div>
 </template>
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: 'NavMedico',
+   methods: {
+      ...mapActions('authentication', [
+        'logout'
+      ]),
+    },
 }
 </script>
