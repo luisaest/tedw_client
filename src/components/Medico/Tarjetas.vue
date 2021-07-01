@@ -11,7 +11,7 @@
                 <b-card-text>
                 Encuestas de estudiantes y personal.
                 </b-card-text>
-                <b-button pill variant="outline-secondary" :to="{name:'encuesta'}">Acceder</b-button>
+                <b-button pill variant="outline-secondary" :to="{name:'encuestas-medico'}">Acceder</b-button>
             </b-card>
 
             <b-card 

@@ -10,8 +10,10 @@ export default new Vuex.Store({
     baseUrl: '/api',
   },
   mutations: {
+    
   },
   actions: {
+    
   },
   modules: {
     authentication

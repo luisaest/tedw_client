@@ -1,10 +1,10 @@
 <template>
     <div>
-       <b-navbar toggleable="lg" type="light" variant="light">
+       <b-navbar toggleable="lg" type="dark" variant="info">
       <b-container>
         <b-navbar-brand >
             <router-link to="medic">
-              <b-img :src="require('../../assets/medico/tecno.png')" width="35%"></b-img>
+              <b-img :src="require('../../assets/imgAlumno/TecNM_logo.png')"  height='60'></b-img>
             </router-link>
           </b-navbar-brand>
          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>

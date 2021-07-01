@@ -24,8 +24,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Medico/index.vue')
   },
   {
-    path: '/surveymedic',
-    name: 'SurveyMedic',
+    path: '/medic/encuestas',
+    name: 'encuestas-medico',
     component: () => import(/* webpackChunkName: "about" */ '../views/Medico/encuesta.vue')
   },
   {
