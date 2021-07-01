@@ -11,7 +11,7 @@
                     <b-col md="6">
                         <b-card-body title="Encuesta">
                         <b-card-text>
-                            Descripcion de la encuesta
+                            Usted puede contestar una encuesta, con la cual se puede tener una diagnostico preliminar sobre si esta contagiado
                         </b-card-text>
                         <b-button :to="{name:'encuesta-alumno'}" variant="info">Contestar encuesta</b-button>
                         </b-card-body>
@@ -28,7 +28,7 @@
                     <b-col md="6">
                         <b-card-body title="Solicitar consulta">
                         <b-card-text>
-                            Descripcion de la consulta
+                            En caso de tener algun sintoma de covid-19, puede solicitar una consulta,esta puede ser presencial o virtual
                         </b-card-text>
                         <b-button :to="{name:'consulta-alumno'}" variant="info">Solicitar consulta</b-button>
                         </b-card-body>
@@ -47,7 +47,7 @@
                     <b-col md="6">
                         <b-card-body title="Alertas">
                         <b-card-text>
-                            Descripcion de las alertas
+                            Puede consultar sus alertas en caso de que se encuentre contagiado o alguien cercano a usted este contagiado
                         </b-card-text>
                         <b-button :to="{name:'alertas-alumno'}" variant="info">Revisar alertas</b-button>
                         </b-card-body>
@@ -64,7 +64,7 @@
                     <b-col md="6">
                         <b-card-body title="Resultados">
                         <b-card-text>
-                            Descripcion de los resultados
+                            Puede revisar los resultados de sus consultas, asi como imprimir sus recetas medicas
                         </b-card-text>
                         <b-button :to="{name:'resultados-alumno',params:{id:id}}" variant="info">Ver resultados</b-button>
                         </b-card-body>

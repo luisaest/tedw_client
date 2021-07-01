@@ -1,6 +1,6 @@
 <template>
     <div>
-       <b-navbar toggleable="lg" type="dark" variant="info">
+       <b-navbar toggleable="lg" type="light" variant="info">
       <b-container>
         <b-navbar-brand :to="{name:'alumno'}">
           <b-img :src="require('../../assets/imgAlumno/TecNM_logo.png')" height='60' alt="logo"></b-img>
