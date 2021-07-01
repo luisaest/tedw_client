@@ -1,6 +1,6 @@
 <template>
     <div>
-       <b-navbar toggleable="lg" type="dark" variant="info">
+       <b-navbar toggleable="lg" type="light" variant="info">
       <b-container>
         <b-navbar-brand :to="{name:'alumno'}">
           <b-img :src="require('../../assets/imgAlumno/TecNM_logo.png')" height='60' alt="logo"></b-img>
@@ -10,11 +10,11 @@
            <b-navbar-nav>
              <b-nav-item :to="{name:'encuesta-alumno'}">Encuesta</b-nav-item>
              <b-nav-item :to="{name:'alertas-alumno'}">Alertas</b-nav-item>
-             <b-nav-item :to="{name:'resultados-alumno'}">Resultados</b-nav-item>
+             <b-nav-item :to="{name:'resultados-alumno',params:{id:id}}">Resultados</b-nav-item>
              <b-nav-item :to="{name:'consulta-alumno'}">Consulta</b-nav-item>
            </b-navbar-nav>
            <b-navbar-nav class="ml-auto">
-             <b-nav-item-dropdown text="Nombre del Alumno" right v-bind="nombreAlumno">
+             <b-nav-item-dropdown v-bind:text="nombre" right>
                <b-dropdown-item>Ajustes</b-dropdown-item>
                <b-dropdown-item>Salir</b-dropdown-item>
              </b-nav-item-dropdown>
@@ -29,8 +29,8 @@ export default {
   name: 'NavAlumno',
    data(){
         return{
-            
+            nombre:'Nombre Alumno'
         }
-    }
+    },
 }
 </script>

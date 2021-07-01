@@ -24,9 +24,19 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Medico/index.vue')
   },
   {
-    path: '/medic/encuestas',
-    name: 'encuestas-medico',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Medico/encuesta.vue')
+    path: '/medico/pruebas',
+    name: 'pruebas',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Medico/test.vue')
+  },
+  {
+    path: '/medico/consultas',
+    name: 'consultas',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Medico/consultation.vue')
+  },
+  {
+    path: '/medico/encuesta',
+    name: 'encuesta',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Medico/surveys.vue')
   },
   {
     path:'/alumno',
@@ -49,9 +59,44 @@ const routes = [
     component:()=>import('../views/alumnos/alertas.vue')
   },
   {
-    path:'/alumno/resultados',
+    path:'/alumno/resultados/:id',
     name:'resultados-alumno',
     component:()=>import('../views/alumnos/resultados.vue')
+  },
+  {
+    path:'/admin',
+    name:'admin',
+    component:()=>import('@/views/Administrador/index.vue')
+  },
+  {
+    path:'/admin/personal',
+    name:'admin-personal',
+    component:()=>import('@/views/Administrador/EstudiantesPersonal.vue')
+  },
+  {
+    path:'/admin/medicamentos',
+    name:'admin-medicamentos',
+    component:()=>import('@/views/Administrador/Medicamentos.vue')
+  },
+  {
+    path:'/admin/medicos',
+    name:'admin-medicos',
+    component:()=>import('@/views/Administrador/Medicos.vue')
+  },
+  {
+    path:'/admin/reportes',
+    name:'admin-reportes',
+    component:()=>import('@/views/Administrador/Reportes.vue')
+  },
+  {
+    path:'/admin/personal/edit/:id',
+    name:'admin-edit',
+    component:()=>import('@/views/Administrador/EditPersonal.vue')
+  },
+  {
+    path:'/admin/medicina/create',
+    name:'crear-medicina',
+    component:()=>import('@/views/Administrador/CrearMedicina.vue')
   },
 ]
 
