@@ -63,7 +63,7 @@ const routes = [
     name:'resultados-alumno',
     component:()=>import('../views/alumnos/resultados.vue')
   },
-  /*{
+  {
     path:'/admin',
     name:'admin',
     component:()=>import('@/views/Administrador/index.vue')
@@ -97,7 +97,12 @@ const routes = [
     path:'/admin/medicina/create',
     name:'crear-medicina',
     component:()=>import('@/views/Administrador/CrearMedicina.vue')
-  },*/
+  },
+  {
+    path:'/admin/medicina/:id',
+    name:'edit-medicina',
+    component:()=>import('@/views/Administrador/EditMedicina.vue')
+  },
 ]
 
 const router = new VueRouter({
