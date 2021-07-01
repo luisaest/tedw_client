@@ -4,16 +4,16 @@
           <NavMedico/>
       </header>
       <main>
-          <DataTableEncuesta/>
+          <DataTableSurvery/>
       </main>
   </div>
 </template>
 
 <script>
-import DataTableEncuesta from '../../components/Medico/DataTableEncuesta.vue'
+import DataTableSurvery from '../../components/Medico/DataTableSurvery.vue'
 import NavMedico from '../../components/Medico/NavMedico.vue'
 export default {
-  components: { NavMedico, DataTableEncuesta },
+  components: { NavMedico, DataTableSurvery },
 
 }
 </script>

@@ -24,9 +24,19 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Medico/index.vue')
   },
   {
-    path: '/surveymedic',
-    name: 'SurveyMedic',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Medico/encuesta.vue')
+    path: '/medico/pruebas',
+    name: 'pruebas',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Medico/test.vue')
+  },
+  {
+    path: '/medico/consultas',
+    name: 'consultas',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Medico/consultation.vue')
+  },
+  {
+    path: '/medico/encuesta',
+    name: 'encuesta',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Medico/surveys.vue')
   },
   {
     path:'/alumno',

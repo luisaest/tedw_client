@@ -23,7 +23,7 @@
                 <b-card-text>
                 Consultas de estudiantes y personal.
                 </b-card-text>
-                <b-button pill variant="outline-secondary" :to="{name:'consulta'}">Acceder</b-button>
+                <b-button pill variant="outline-secondary" :to="{name:'consultas'}">Acceder</b-button>
             </b-card>
 
             <b-card 
