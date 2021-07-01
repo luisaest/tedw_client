@@ -4,10 +4,10 @@ import HTTP from '../http';
 export default {
     namespaced: true,
     state:{
-        registerEmail: 'alexsald@itcelaya.edu.mx',
-        registerPassword: '123',
-        registerName: 'alex',
-        registerDepartment: 'Sistemas',
+        registerEmail: null,
+        registerPassword: null,
+        registerName: null,
+        registerDepartment: null,
         loginEmail: null,
         loginPassword: null,
         token: null,
@@ -16,6 +16,10 @@ export default {
         loginUser: null,
     },
     actions: {
+        logout({ commit }){
+            commit('setToken', null);
+            router.push('/');
+        },
         register({ commit, state }) {
             commit('setRegisterError', null)
             return HTTP().post('/auth/register', {

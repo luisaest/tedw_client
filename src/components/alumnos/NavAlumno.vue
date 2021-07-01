@@ -16,7 +16,7 @@
            <b-navbar-nav class="ml-auto">
              <b-nav-item-dropdown v-bind:text="nombre" right>
                <b-dropdown-item>Ajustes</b-dropdown-item>
-               <b-dropdown-item>Salir</b-dropdown-item>
+               <b-dropdown-item @click="logout">Salir</b-dropdown-item>
              </b-nav-item-dropdown>
            </b-navbar-nav>
          </b-collapse>
@@ -25,12 +25,19 @@
     </div>
 </template>
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: 'NavAlumno',
    data(){
         return{
             nombre:'Nombre Alumno'
         }
+    },
+    methods: {
+      ...mapActions('authentication', [
+        'logout'
+      ]),
     },
 }
 </script>

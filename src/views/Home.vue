@@ -11,8 +11,8 @@
                     <v-col cols="12" md="8">
                       <v-card-text class="mt-12">
                         <h1
-                          class="text-center display-2 teal--text text--accent-3"
-                        >Bienvenido a aksdmask</h1>
+                          class="text-center display-2 cyan--text text--accent-3"
+                        >¡Bienvenido!</h1>
                         <div class="text-center mt-4">
                           <v-avatar size="68px" >
                             <img src="https://image.flaticon.com/icons/png/512/1869/1869354.png">
@@ -33,7 +33,7 @@
                             name="Email"
                             prepend-icon="email"
                             type="text"
-                            color="teal accent-3"
+                            color="cyan accent-3"
                             :value="loginEmail"
                             @input = "setLoginEmail"
                           />
@@ -44,7 +44,7 @@
                             name="password"
                             prepend-icon="lock"
                             type="password"
-                            color="teal accent-3"
+                            color="cyan accent-3"
                             :value="loginPassword"
                             @input = "setLoginPassword"
                           />
@@ -56,40 +56,40 @@
                         </v-alert>
                       </v-card-text>
                       <div class="text-center mt-3">
-                        <v-btn rounded color="teal accent-3" dark @click="login();">Iniciar sesión</v-btn>
+                        <v-btn rounded color="cyan accent-3" light @click="login();">Iniciar sesión</v-btn>
                       </div>
                       <br>
                     </v-col>
-                    <v-col cols="12" md="4" class="teal accent-3">
-                      <v-card-text class="white--text mt-12">
+                    <v-col cols="12" md="4" class="cyan accent-3">
+                      <v-card-text class="black--text mt-12">
                         <h1 class="text-center display-1">¡Hola Lince!</h1>
                         <h5
                           class="text-center"
                         >Esta aplicación nos ayudará a mantener una comunidad estudiantil segura</h5>
                       </v-card-text>
                       <div class="text-center">
-                        <v-btn rounded outlined dark @click="step++">Registrarse</v-btn>
+                        <v-btn rounded outlined light @click="step++">Registrarse</v-btn>
                       </div>
                     </v-col>
                   </v-row>
                 </v-window-item>
                 <v-window-item :value="2">
                   <v-row class="fill-height">
-                    <v-col cols="12" md="4" class="teal accent-3">
-                      <v-card-text class="white--text mt-12">
+                    <v-col cols="12" md="4" class="cyan accent-3">
+                      <v-card-text class="dark--text mt-12">
                         <h1 class="text-center display-1">¡Bienvenido!</h1>
                         <h5
                           class="text-center"
                         >Por favor crea tu cuenta con tus datos correctos y correo institucional</h5>
                       </v-card-text>
                       <div class="text-center">
-                        <v-btn rounded outlined dark @click="step--">Iniciar sesión</v-btn>
+                        <v-btn rounded outlined light @click="step--">Iniciar sesión</v-btn>
                       </div>
                     </v-col>
 
                     <v-col cols="12" md="8">
                       <v-card-text class="mt-12">
-                        <h1 class="text-center display-2 teal--text text--accent-3">Crea tu cuenta</h1>
+                        <h1 class="text-center display-2 cyan--text text--accent-3">Crea tu cuenta</h1>
                         <div class="text-center mt-4">
                           <v-avatar size="68px" >
                             <img src="https://image.flaticon.com/icons/png/512/1869/1869354.png">
@@ -110,7 +110,7 @@
                             name="Nombre"
                             prepend-icon="person"
                             type="text"
-                            color="teal accent-3"
+                            color="cyan accent-3"
                             :value="registerName"
                             @input = "setRegisterName"
                           />
@@ -119,7 +119,7 @@
                             name="Correo"
                             prepend-icon="email"
                             type="text"
-                            color="teal accent-3"
+                            color="cyan accent-3"
                              :value="registerEmail"
                              @input = "setRegisterEmail"
                           />
@@ -130,7 +130,7 @@
                             name="contraseña"
                             prepend-icon="lock"
                             type="password"
-                            color="teal accent-3"
+                            color="cyan accent-3"
                              :value="registerPassword"
                              @input = "setRegisterPassword"
                           />
@@ -151,7 +151,7 @@
                         </v-alert>
                       </v-card-text>
                       <div class="text-center mt-n5">
-                        <v-btn rounded color="teal accent-3" dark @click="register">Registrarse</v-btn>
+                        <v-btn rounded color="cyan accent-3" light @click="register">Registrarse</v-btn>
                       </div>
                       <br>
                     </v-col>
@@ -186,7 +186,7 @@ export default {
   ...mapMutations('authentication', [
       'setRegisterEmail', 'setRegisterPassword',
       'setRegisterName', 'setRegisterDepartment',
-      'setLoginEmail', 'setLoginPassword']),
+      'setLoginEmail', 'setLoginPassword', 'setToken']),
   ...mapActions('authentication', [
       'register',
       'login',

@@ -17,7 +17,7 @@
     </div>
 </template>
 <script>
-const SERVER_URL="http://192.168.1.73:3333/api/private_consultation/";
+const SERVER_URL="http://localhost:3333/api/private_consultation/";
 export default {
     name:'ResultadosAlumno',
     data(){
