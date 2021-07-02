@@ -13,6 +13,9 @@
                 Nombre: {{us.name}}
             </v-col>
             <v-col>
+                Rol: {{us.rol}}
+            </v-col>
+            <v-col>
                 <b-button  variant="outline-primary" :to="{name:'admin-edit',params:{id:us.id}}">Editar</b-button>
                 <b-button variant="outline-danger" @click="Delete(us)">eliminar</b-button>
             </v-col>
@@ -32,7 +35,7 @@ export default {
     },
     methods:{
         async getUsers(){
-            const BaseURL='http://192.168.1.73:3333/api/auth/users';
+            const BaseURL='http://192.168.1.73:3333/api/users/personal';
             const resp=await fetch(BaseURL);
             const data=await resp.json();
             this.usuarios=data;
