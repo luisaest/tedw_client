@@ -54,7 +54,7 @@
       async initialize () {
         try {
 				const data = await fetch(
-					`http://127.0.0.1:3333/api/orderDT`
+					`http://192.168.1.73:3333/api/orderDT`
 				);
 				const array = await data.json();
 				this.desserts = array;

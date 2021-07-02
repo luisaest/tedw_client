@@ -15,7 +15,7 @@
              <b-nav-item :to="{name:'pruebas'}">Pruebas</b-nav-item>
            </b-navbar-nav>
            <b-navbar-nav class="ml-auto">
-             <b-nav-item-dropdown text="Nombre del medico" right>
+             <b-nav-item-dropdown text="Medico" right>
                <b-dropdown-item>Ajustes</b-dropdown-item>
                <b-dropdown-item  @click="logout">Salir</b-dropdown-item>
              </b-nav-item-dropdown>

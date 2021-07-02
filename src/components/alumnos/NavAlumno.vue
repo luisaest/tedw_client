@@ -32,7 +32,7 @@ export default {
   name: 'NavAlumno',
    data(){
         return{
-            nombre:'Nombre Alumno'
+            nombre:'Alumno'
         }
     },
     methods: {

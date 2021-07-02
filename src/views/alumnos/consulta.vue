@@ -6,7 +6,7 @@
             <b-img center :src="require('../../assets/imgAlumno/consulta.png')" height='250' rounded></b-img>
         </div>
         <div class=" container">
-            <b-form @submit="Enviar" @reset="Reset">
+            <b-form  @reset="Reset">
                 <b-form-group>
                     <h4>Sintomas</h4>
                     <b-form-textarea
@@ -27,7 +27,7 @@
                     <b-form-file  v-model="file3" class="mt-3 form-control" plain></b-form-file>
                 </b-form-group>
                 <div class="text-center m-4">
-                     <b-button  type="submit"  variant="primary">Solicitar</b-button>
+                     <b-button @click="Enviar()"  variant="primary">Solicitar</b-button>
                     <b-button  type="reset" variant="danger">Cancelar</b-button>
                 </div>
             </b-form>
@@ -35,6 +35,7 @@
     </div>
 </template>
 <script>
+import router from '@/router'
 import Nav from '@/components/alumnos/NavAlumno.vue'
 export default {
     name:'consulta',
@@ -57,7 +58,8 @@ export default {
     },
     methods:{
         Enviar(){
-            alert(this.sintomas);
+            alert("Su solicitud de consulta ha sido enviada");
+            router.push("/alumno");
         },
         Reset(){
             console.log("hola");

@@ -8,7 +8,7 @@
                     <b-card no-body class="overflow-hidden" style="max-width: 540px;">
                         <b-row no-gutters>
                         <b-col md="6">
-                            <b-card-img :src="require('../../assets/imgAlumno/encuesta.png')" height='200' alt="Image" class="rounded-0"></b-card-img>
+                            <b-card-img src="https://media.gettyimages.com/vectors/personal-badge-flat-square-icon-with-long-shadows-vector-id849520468" height='200' alt="Image" class="rounded-0"></b-card-img>
                         </b-col>
                         <b-col md="6">
                             <b-card-body title="Estudiantes y personal">
@@ -25,7 +25,7 @@
                     <b-card no-body class="overflow-hidden" style="max-width: 540px;">
                         <b-row no-gutters>
                         <b-col md="6">
-                            <b-card-img :src="require('../../assets/imgAlumno/consulta.png')" height='200' alt="Image" class="rounded-0"></b-card-img>
+                            <b-card-img src="https://st2.depositphotos.com/5266903/10120/i/450/depositphotos_101200584-stock-photo-medical-knowledge-flat-longshadow-square.jpg" height='200' alt="Image" class="rounded-0"></b-card-img>
                         </b-col>
                         <b-col md="6">
                             <b-card-body title="Medicamentos">
@@ -44,7 +44,7 @@
                     <b-card no-body class="overflow-hidden" style="max-width: 540px;">
                         <b-row no-gutters>
                         <b-col md="6">
-                            <b-card-img :src="require('../../assets/imgAlumno/alertas.png')" height='200' alt="Image" class="rounded-0"></b-card-img>
+                            <b-card-img src="https://cdn3.iconfinder.com/data/icons/ageing-society-2/512/Medical-medicine-doctor-hospital-physician-512.png" height='200' alt="Image" class="rounded-0"></b-card-img>
                         </b-col>
                         <b-col md="6">
                             <b-card-body title="Medicos">

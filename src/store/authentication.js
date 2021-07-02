@@ -27,8 +27,8 @@ export default {
                 password: state.registerPassword,
                 department: state.registerDepartment,
                 name: state.registerName,
-                id_rol: 1,
-                id_status: 1,
+                id_rol: 6,
+                id_status: 2,
             })
             .then(({ data }) => {
                 commit('setToken', data.token);
@@ -60,6 +60,9 @@ export default {
                             break;
                         case 3:
                             router.push('/admin');
+                            break;
+                        case 6:
+                            router.push('/alumno');
                             break;
                     }
                 })

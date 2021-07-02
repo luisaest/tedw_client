@@ -57,7 +57,7 @@
       async initialize () {
         try {
 				const data = await fetch(
-					`http://127.0.0.1:3333/api/surveyDT`
+					`http://192.168.1.73:3333/api/surveyDT`
 				);
 				const array = await data.json();
 				this.desserts = array;

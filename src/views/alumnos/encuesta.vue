@@ -87,7 +87,7 @@
                 <label class="mr-sm-2" for="Answer15">
                 Describa si tiene otros sintomas
                 </label>
-                <b-form-textarea size="sm" v-model="Answer15" placeholder="Describa sus sintomas" required></b-form-textarea>
+                <b-form-textarea size="sm" v-model="Answer15" placeholder="Describa sus sintomas"></b-form-textarea>
                 <hr>
                 <div class="text-center">
                     <b-row>
@@ -107,6 +107,7 @@
     
 </template>
 <script>
+import router from '@/router'
 import Nav from '@/components/alumnos/NavAlumno.vue'
 export default {
     name:'encuesta',
@@ -135,10 +136,11 @@ export default {
     },
     methods:{
         Enviar(event){
-            alert(this.Answer15)
+            alert("Su encuesta ha sido enviada");
+            router.push('/alumno')
         },
         Reset(event){
-            alert(this.Answer1)
+            
         }
     },
     components:{
